@@ -39,7 +39,7 @@
             <td> <p><%= "コメント数:#{@book.book_comments.count}"%></p></td>
         </tr>
       </table>
-      
+
       <table>
         <% @book.book_comments.each do |book_comment| %>
         <tr>
@@ -60,10 +60,10 @@
       <div>
         <%= form_with model: [@book, @book_comment], local: true do |f| %>
           <%= f.text_area :comment,class: "form-control" %>
-          <%= f.submit "送信" %>
+          <%= f.submit "送信",class: 'btn btn-outline-secondary' %>
         <% end %>
       </div>
-      
+
     </div>
   </div>
 </div>
